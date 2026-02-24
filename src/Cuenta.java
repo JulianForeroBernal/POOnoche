@@ -3,10 +3,10 @@ public class Cuenta {
     private String numCuenta;
     private String franquicia;
     private double saldo;
-    //constructor vacio
+    //constructor vacío
     public Cuenta() {
     }
-    // constructor con todos los parametros
+    // constructor con todos los parámetros
     public Cuenta(String numCuenta, String franquicia, double saldo) {
         this.numCuenta = numCuenta;
         this.franquicia = franquicia;
@@ -37,8 +37,6 @@ public class Cuenta {
         this.saldo = saldo;
     }
     // to string
-
-
     @Override
     public String toString() {
         return "Cuenta{" +
@@ -49,5 +47,8 @@ public class Cuenta {
     }
     public double depositar(double saldo){
         return (this.saldo + saldo);
+    }
+    public double retirar(double monto){
+        return (this.saldo - monto);
     }
 }
